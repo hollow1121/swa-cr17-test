@@ -1,0 +1,138 @@
+/* ============================================================
+   CR17 Capital Partners — Custom Styles
+   Dark navy institutional theme with gold accent
+   ============================================================ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* ---------------- Hero background ---------------- */
+.hero-bg {
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, #1a2b42 0%, #0a1828 55%, #060f1c 100%);
+}
+
+/* Abstract geometric pattern overlays (SVG data-uri) — subtle angled-line & dot motif echoing the name card's minimalist back design */
+.geo-pattern {
+  background-image:
+    linear-gradient(115deg, transparent 45%, rgba(211, 184, 70, 0.05) 46%, rgba(211, 184, 70, 0.05) 47%, transparent 48%),
+    linear-gradient(65deg, transparent 55%, rgba(211, 184, 70, 0.035) 56%, rgba(211, 184, 70, 0.035) 57%, transparent 58%),
+    radial-gradient(circle at 85% 20%, rgba(211, 184, 70, 0.09) 0%, transparent 40%),
+    radial-gradient(circle at 10% 80%, rgba(64, 86, 112, 0.18) 0%, transparent 45%);
+  background-size: cover;
+}
+
+.geo-pattern-2 {
+  background-image:
+    radial-gradient(circle at 90% 10%, rgba(64, 86, 112, 0.14) 0%, transparent 35%),
+    radial-gradient(circle at 5% 90%, rgba(211, 184, 70, 0.07) 0%, transparent 40%),
+    linear-gradient(180deg, transparent 0%, rgba(255,255,255,0.02) 50%, transparent 100%);
+}
+
+/* Thin diagonal line accents */
+.hero-bg::before {
+  content: "";
+}
+
+/* ---------------- Cards ---------------- */
+.strategy-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 4px;
+  padding: 2rem 1.75rem;
+  transition: border-color 0.3s ease, transform 0.3s ease, background 0.3s ease;
+}
+
+.strategy-card:hover {
+  border-color: rgba(211, 184, 70, 0.45);
+  transform: translateY(-4px);
+  background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+}
+
+.value-row {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 4px;
+  padding: 1.75rem;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.value-row:hover {
+  border-color: rgba(211, 184, 70, 0.4);
+  background: rgba(255,255,255,0.035);
+}
+
+.icon-badge {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(211, 184, 70, 0.12);
+  border: 1px solid rgba(211, 184, 70, 0.35);
+  color: rgb(211, 184, 70);
+  font-size: 1.1rem;
+  margin-bottom: 1.25rem;
+}
+
+.value-row .icon-badge {
+  margin-bottom: 0;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 4px;
+  padding: 2rem 1.5rem;
+  transition: border-color 0.3s ease, transform 0.3s ease, background 0.3s ease;
+}
+
+.contact-card:hover {
+  border-color: rgba(211, 184, 70, 0.5);
+  transform: translateY(-3px);
+  background: rgba(255,255,255,0.04);
+}
+
+/* ---------------- Reveal on scroll ---------------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------------- Scrollbar ---------------- */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #060f1c;
+}
+::-webkit-scrollbar-thumb {
+  background: #2b3f58;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #405670;
+}
+
+/* ---------------- Mobile menu ---------------- */
+#mobile-menu.flex {
+  display: flex;
+}
